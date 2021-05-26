@@ -6,11 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { VendeursComponent } from './vendeurs/vendeurs.component';
+import { VendeurDetailComponent } from './vendeurs/vendeur-detail/vendeur-detail.component';
+import { MessagesComponent } from './vendeurs/messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VendeursComponent
+    VendeursComponent,
+    VendeurDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

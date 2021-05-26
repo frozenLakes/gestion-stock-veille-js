@@ -6,9 +6,4 @@
   </li>
 </ul>
 
-<div *ngIf="selectedVendeur">
-  <h2>{{selectedVendeur.name}}</h2>
-  <div><span>id: </span>{{selectedVendeur.id}}</div>
-  <span>Email: </span>{{selectedVendeur.email}}
-  <span>Adresse: </span>{{selectedVendeur.address}}
-</div>
+<app-vendeur-detail [vendeur]="selectedVendeur"></app-vendeur-detail>
