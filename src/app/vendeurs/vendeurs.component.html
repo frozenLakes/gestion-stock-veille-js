@@ -1,0 +1,14 @@
+<h2>Vendeurs</h2>
+
+<ul class="vendeurs" *ngFor="let vendeur of vendeurs">
+  <li [class.selected]="vendeur === selectedVendeur" (click)="onSelect(vendeur)">
+    <span class="badge">{{vendeur.id}}: </span> {{vendeur.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedVendeur">
+  <h2>{{selectedVendeur.name}}</h2>
+  <div><span>id: </span>{{selectedVendeur.id}}</div>
+  <span>Email: </span>{{selectedVendeur.email}}
+  <span>Adresse: </span>{{selectedVendeur.address}}
+</div>
