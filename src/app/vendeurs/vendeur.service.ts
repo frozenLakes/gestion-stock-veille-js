@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 
 import { Vendeur } from './vendeur';
 import { VENDEURS } from './mock-vendeurs';
-import { MessageService } from "./messages/message.service";
+import { MessageService } from "../messages/message.service";
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +16,11 @@ export class VendeurService {
     const vendeurs = of(VENDEURS);
     this.messageService.add('VendeurService: fetched vendeurs');
     return vendeurs;
+  }
+
+  getVendeur(id: number): Observable<Vendeur> {
+    const vendeur = VENDEURS.find(v => v.id === id)!;
+    this.messageService.add(`VendeurService: fetched vendeur id=${id}`);
+    return of(vendeur);
   }
 }

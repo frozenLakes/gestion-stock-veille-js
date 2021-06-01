@@ -1,9 +1,7 @@
 <h2>Vendeurs</h2>
 
 <ul class="vendeurs" *ngFor="let vendeur of vendeurs">
-  <li [class.selected]="vendeur === selectedVendeur" (click)="onSelect(vendeur)">
+  <a routerLink="/detail/{{vendeur.id}}">
     <span class="badge">{{vendeur.id}}: </span> {{vendeur.name}}
-  </li>
+  </a>
 </ul>
-
-<app-vendeur-detail [vendeur]="selectedVendeur"></app-vendeur-detail>

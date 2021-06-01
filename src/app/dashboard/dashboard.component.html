@@ -1,0 +1,7 @@
+<h2>Top Vendeurs</h2>
+<div class="vendeurs-menu">
+  <a *ngFor="let vendeur of vendeurs"
+    routerLink="/detail/{{vendeur.id}}">
+    {{vendeur.name}}
+  </a>
+</div>

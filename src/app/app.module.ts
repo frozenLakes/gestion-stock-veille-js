@@ -7,14 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VendeursComponent } from './vendeurs/vendeurs.component';
 import { VendeurDetailComponent } from './vendeurs/vendeur-detail/vendeur-detail.component';
-import { MessagesComponent } from './vendeurs/messages/messages.component';
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VendeursComponent,
     VendeurDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
