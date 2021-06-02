@@ -30,6 +30,13 @@ export class VendeurDetailComponent implements OnInit {
       .subscribe(vendeur => this.vendeur = vendeur);
   }
 
+  save(): void {
+    if (this.vendeur) {
+      this.vendeurService.updateVendeur(this.vendeur)
+        .subscribe(() => this.goBack())
+    }
+  }
+
   goBack(): void {
     this.location.back();
   }

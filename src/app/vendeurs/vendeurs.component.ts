@@ -23,4 +23,18 @@ export class VendeursComponent implements OnInit {
       .subscribe(vendeurs => this.vendeurs = vendeurs);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if(!name) { return; }
+    this.vendeurService.addVendeur({name} as Vendeur)
+      .subscribe(vendeur => {
+        this.vendeurs.push(vendeur);
+      })
+  }
+
+  delete(vendeur: Vendeur): void {
+    this.vendeurs = this.vendeurs.filter(v => v !== vendeur);
+    this.vendeurService.deleteVendeur(vendeur.id).subscribe();
+  }
+
 }
